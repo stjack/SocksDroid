@@ -1,0 +1,11 @@
+1. cd /home/jack/StudioProjects/SocksDroid/app/src/main
+
+2. build-jni.sh
+
+3. Then start to compile apk part...
+
+
+https://www.iteye.com/blog/ch-kexin-2361194
+
+tun2socks manual
+http://jlk.fjfi.cvut.cz/arch/manpages/man/badvpn-tun2socks.8.en
