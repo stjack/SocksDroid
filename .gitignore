@@ -1,5 +1,5 @@
 build
 obj
-libs
-assets
+##libs
+##assets
 .gradle
