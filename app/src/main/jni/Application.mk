@@ -1,4 +1,5 @@
-APP_ABI      			:= armeabi-v7a arm64-v8a mips x86
-APP_PLATFORM 			:= android-21
-APP_STL      			:= stlport_static
-NDK_TOOLCHAIN_VERSION 	:= 4.9
+APP_ABI      			:= armeabi-v7a arm64-v8a    ##mips x86
+APP_PLATFORM 			:= android-23
+##APP_STL      			:= c++_static       ##stlport_static
+APP_STL      			:= c++_shared
+NDK_TOOLCHAIN_VERSION 	:= clang
