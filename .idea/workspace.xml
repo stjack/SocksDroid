@@ -10,12 +10,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="328fbfaa-341a-43f8-a000-c3eba4dbb91f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/release/SocketDroid.apk" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/release/output.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/assets/arm64-v8a/libsystem.so" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/assets/armeabi-v7a/libsystem.so" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ReadME_Development" beforeDir="false" afterPath="$PROJECT_DIR$/ReadME_Development" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/libs/arm64-v8a/libsystem.so" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/libs/armeabi-v7a/libsystem.so" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/groovy/net/typeblog/socks/SocksVpnService.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/groovy/net/typeblog/socks/SocksVpnService.groovy" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -45,11 +48,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/groovy/net/typeblog/socks/SocksVpnService.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1335">
-              <caret line="26" column="14" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
+            <state relative-caret-position="244">
+              <caret line="138" column="33" selection-start-line="138" selection-start-column="33" selection-end-line="138" selection-end-column="33" />
               <folding>
                 <element signature="e#28#59#0" expanded="true" />
               </folding>
@@ -57,7 +60,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/jni/Android.mk">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="330">
@@ -79,7 +82,7 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/groovy/net/typeblog/socks/util/Routes.groovy">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="105">
-              <caret line="11" column="31" lean-forward="true" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
+              <caret line="11" column="31" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -428,7 +431,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572084789691</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="2019-10-26 - baseline - build apk succeed !!!">
+      <created>1572088054253</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1572088054253</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TodoView">
@@ -442,10 +452,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1375" height="904" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.32430398" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.32430398" />
       <window_info id="Structure" order="2" side_tool="true" />
       <window_info id="Build Variants" order="3" side_tool="true" />
       <window_info id="Image Layers" order="4" />
@@ -460,8 +469,8 @@
       <window_info anchor="bottom" id="Android Profiler" order="4" show_stripe_button="false" />
       <window_info anchor="bottom" id="Find" order="5" sideWeight="0.49887133" weight="0.32947233" />
       <window_info anchor="bottom" id="Terminal" order="6" sideWeight="0.49887133" weight="0.32947233" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.13769752" side_tool="true" visible="true" weight="0.30319148" />
-      <window_info anchor="bottom" id="Build" order="8" sideWeight="0.8623025" visible="true" weight="0.30319148" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5229496" side_tool="true" visible="true" weight="0.30319148" />
+      <window_info active="true" anchor="bottom" id="Build" order="8" sideWeight="0.47705042" visible="true" weight="0.30319148" />
       <window_info anchor="bottom" id="TODO" order="9" sideWeight="0.49962378" weight="0.32947233" />
       <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
@@ -476,7 +485,8 @@
     <MESSAGE value="2019-10-12 - apk works!" />
     <MESSAGE value="2019-10-12 - apk works!But can't bypass local ipaddress!!" />
     <MESSAGE value="2019-10-26" />
-    <option name="LAST_COMMIT_MESSAGE" value="2019-10-26" />
+    <MESSAGE value="2019-10-26 - baseline - build apk succeed !!!" />
+    <option name="LAST_COMMIT_MESSAGE" value="2019-10-26 - baseline - build apk succeed !!!" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$USER_HOME$/Android/Sdk/ndk/20.0.5594570/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/string.h">
@@ -701,26 +711,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/groovy/net/typeblog/socks/SocksVpnService.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1335">
-          <caret line="26" column="14" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
-          <folding>
-            <element signature="e#28#59#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/groovy/net/typeblog/socks/util/Routes.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="11" column="31" lean-forward="true" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/settings.gradle">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/local.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -732,6 +722,26 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="22" column="21" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/groovy/net/typeblog/socks/util/Routes.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="11" column="31" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/settings.gradle">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/groovy/net/typeblog/socks/SocksVpnService.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="244">
+          <caret line="138" column="33" selection-start-line="138" selection-start-column="33" selection-end-line="138" selection-end-column="33" />
+          <folding>
+            <element signature="e#28#59#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
