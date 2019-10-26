@@ -132,12 +132,35 @@ public class SocksVpnService extends VpnService {
 			// Note that this DNS is just a stub.
 			// Actual DNS requests will be redirected through pdnsd.
 			addRoute "8.8.8.8", 32
-			addRoute "192.168.0.1", 24
-			addRoute "192.168.1.1", 32
-			addRoute "192.168.2.1", 32
-			addRoute ""
 			// Adding by Jack
-			Routes
+			addRoute "192.168.0.1", 24
+			addRoute "192.168.1.1", 24
+			addRoute "192.168.2.1", 24
+			//Team viewer
+			addRoute "13.112.89.178" ,32
+			addRoute "46.163.100.220" ,32
+			addRoute "108.59.5.129" ,32
+			addRoute "108.59.5.130" ,32
+			addRoute "95.211.37.197" ,32
+			addRoute "95.211.37.198" ,32
+			addRoute "188.120.239.102" ,32
+			addRoute "188.93.226.130" ,32
+			addRoute "46.105.99.93" ,32
+			addRoute "178.77.120.6" ,32
+			addRoute "87.230.74.43" ,32
+			addRoute "87.230.74.44" ,32
+			addRoute "13.112.89.178" ,32
+			addRoute "13.112.89.178" ,32
+			addRoute "13.112.89.178" ,32
+			addRoute "13.112.89.178" ,32
+			addRoute "13.112.89.178" ,32
+			addRoute "13.112.89.178" ,32
+			addRoute "13.112.89.178" ,32
+			addRoute "13.112.89.178" ,32
+			addRoute "13.112.89.178" ,32
+			addRoute "13.112.89.178" ,32
+
+
 		}
 		
 		// Do app routing
