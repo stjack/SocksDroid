@@ -38,18 +38,27 @@ public class SocksVpnService extends VpnService {
 		}
 
 		final String name = intent.getStringExtra(INTENT_NAME);
+		Log.d(TAG, "name :  "+name)
 		final String server = intent.getStringExtra(INTENT_SERVER);
+		Log.d(TAG, "server :  "+server)
 		final int port = intent.getIntExtra(INTENT_PORT, 1080);
+		Log.d(TAG, "port :  "+port)
 		final String username = intent.getStringExtra(INTENT_USERNAME);
 		final String passwd = intent.getStringExtra(INTENT_PASSWORD);
 		final String route = intent.getStringExtra(INTENT_ROUTE);
+		Log.d(TAG, "route :  "+route)
 		final String dns = intent.getStringExtra(INTENT_DNS);
+		Log.d(TAG, "dns :  "+dns)
 		final int dnsPort = intent.getIntExtra(INTENT_DNS_PORT, 53);
+		Log.d(TAG, "dnsPort :  "+dnsPort)
 		final boolean perApp = intent.getBooleanExtra(INTENT_PER_APP, false);
+		Log.d(TAG, "perApp :  "+perApp)
 		final boolean appBypass = intent.getBooleanExtra(INTENT_APP_BYPASS, false);
 		final String[] appList = intent.getStringArrayExtra(INTENT_APP_LIST);
 		final boolean ipv6 = intent.getBooleanExtra(INTENT_IPV6_PROXY, false);
+		Log.d(TAG, "ipv6 :  "+ipv6)
 		final String udpgw = intent.getStringExtra(INTENT_UDP_GW);
+		Log.d(TAG, "udpgw :  "+udpgw)
 
 		/*****************adding by Jack****************/
 		File proxy = new File("${DIR}/proxy.txt")
