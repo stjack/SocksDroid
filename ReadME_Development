@@ -9,3 +9,8 @@ https://www.iteye.com/blog/ch-kexin-2361194
 
 tun2socks manual
 http://jlk.fjfi.cvut.cz/arch/manpages/man/badvpn-tun2socks.8.en
+
+
+4.Issue when try to use it as background service
+
+https://stackoverflow.com/questions/46445265/android-8-0-java-lang-illegalstateexception-not-allowed-to-start-service-inten
