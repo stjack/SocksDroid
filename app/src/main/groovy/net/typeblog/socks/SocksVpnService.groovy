@@ -22,6 +22,7 @@ public class SocksVpnService extends VpnService {
 	private ParcelFileDescriptor mInterface
 	private boolean mRunning = false
 
+
 	@Override int onStartCommand(Intent intent, int flags, int startId) {
 		
 		if (DEBUG) {
@@ -35,7 +36,7 @@ public class SocksVpnService extends VpnService {
 		if (mRunning) {
 			return 0
 		}
-		
+
 		final String name = intent.getStringExtra(INTENT_NAME);
 		final String server = intent.getStringExtra(INTENT_SERVER);
 		final int port = intent.getIntExtra(INTENT_PORT, 1080);
@@ -49,7 +50,51 @@ public class SocksVpnService extends VpnService {
 		final String[] appList = intent.getStringArrayExtra(INTENT_APP_LIST);
 		final boolean ipv6 = intent.getBooleanExtra(INTENT_IPV6_PROXY, false);
 		final String udpgw = intent.getStringExtra(INTENT_UDP_GW);
-		
+
+		/*****************adding by Jack****************/
+		File proxy = new File("${DIR}/proxy.txt")
+
+		if (proxy.exists()==false) {
+			Log.d(TAG, "proxy.txt NOT existed")
+		}else{
+			def lines = proxy.readLines()
+			String proxyline=null
+			lines.each { String line ->
+				if(line!=null && line.length()>3){
+					proxyline=line
+					return true
+				}
+			}
+			if(proxyline!=null && proxyline.contains(":")){
+				def all=proxyline.split(":")
+				final  String server0=all[0]
+				final  int port0 = Integer.parseInt(all[1])
+				// Create the notification
+				startForeground(R.drawable.ic_launcher,
+						new Notification.Builder(this).with {
+							contentTitle = getString(R.string.notify_title)
+							contentText = String.format(getString(R.string.notify_msg), "SocksDroid")
+							priority = Notification.PRIORITY_MIN
+							smallIcon = android.R.color.transparent
+							build()
+						})
+
+				// Create an fd.
+				configure(name, route, perApp, appBypass, appList, ipv6)
+
+				if (DEBUG)
+					Log.d(TAG, "fd: ${mInterface.fd}")
+
+				if (mInterface)
+					start(mInterface.getFd(), server0, port0, username, passwd, dns, dnsPort, ipv6, udpgw)
+
+				START_STICKY
+				return
+			}else{
+				Log.d(TAG, "proxy.txt NOT contains proxy information!")
+			}
+		}
+
 		// Create the notification
 		startForeground(R.drawable.ic_launcher,
 			new Notification.Builder(this).with {
