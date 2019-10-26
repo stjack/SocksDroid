@@ -1,6 +1,6 @@
 1. cd /home/jack/StudioProjects/SocksDroid/app/src/main
 
-2. build-jni.sh
+2. ./build-jni.sh
 
 3. Then start to compile apk part...
 

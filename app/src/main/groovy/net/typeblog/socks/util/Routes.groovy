@@ -26,7 +26,7 @@ class Routes {
 			String[] cidr = it.split("/");
 
 			// Cannot handle 127.0.0.0/8
-			if (cidr.length == 2) {
+			if (cidr.length == 2 && !cidr[0].startsWith("127")) {
 				builder.addAddress(cidr[0], cidr[1].toInteger());
 			}
 		}

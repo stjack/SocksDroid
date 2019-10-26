@@ -35,12 +35,11 @@ apply plugin: 'com.android.application'
 apply plugin: 'groovyx.android'
 
 android {
-	compileSdkVersion 29
+	compileSdkVersion 28
 	defaultConfig {
 		applicationId "net.typeblog.socks"
-		/**Support SDK 26+  !!!!**/
 		minSdkVersion 26
-		targetSdkVersion 27
+		targetSdkVersion 28
 		versionCode 11
 		versionName "0.11"
 		testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
