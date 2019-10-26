@@ -25,6 +25,7 @@ public class SocksVpnService extends VpnService {
 	@Override int onStartCommand(Intent intent, int flags, int startId) {
 		
 		if (DEBUG) {
+		if (DEBUG) {
 			Log.d(TAG, "starting")
 		}
 		
@@ -131,6 +132,12 @@ public class SocksVpnService extends VpnService {
 			// Note that this DNS is just a stub.
 			// Actual DNS requests will be redirected through pdnsd.
 			addRoute "8.8.8.8", 32
+			addRoute "192.168.0.1", 24
+			addRoute "192.168.1.1", 32
+			addRoute "192.168.2.1", 32
+			addRoute ""
+			// Adding by Jack
+			Routes
 		}
 		
 		// Do app routing

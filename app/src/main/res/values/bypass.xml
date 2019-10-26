@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--https://penpenguanguan.com/2099.html-->
+    <string-array name="bypass">
+        <item>192.168.0.0/16</item>
+        <item>87.230.74.0/16</item>
+        <item>108.59.5.0/16</item>
+        <item>95.211.37.0/16</item>
+        <item>188.120.239.0/16</item>
+        <item>188.93.226.0/16</item>
+        <item>46.105.99.0/16</item>
+        <item>178.77.120.0/16</item>
+        <item>87.230.74.0/16</item>
+        <item>89.34.166.138/16</item>
+    </string-array>
+</resources>

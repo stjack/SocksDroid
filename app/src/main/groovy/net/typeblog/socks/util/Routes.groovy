@@ -9,6 +9,7 @@ import static net.typeblog.socks.util.Constants.*
 class Routes {
 	static void addRoutes(Context context, VpnService.Builder builder, String name) {
 		String[] routes = null;
+		String[] bypass = null;
 		switch (name) {
 			case ROUTE_ALL:
 				routes = ["0.0.0.0/0"]
@@ -20,7 +21,15 @@ class Routes {
 				routes = ["0.0.0.0/0"]
 				break
 		}
-		
+		bypass = context.resources.getStringArray(R.array.bypass)
+		bypass.each {
+			String[] cidr = it.split("/");
+
+			// Cannot handle 127.0.0.0/8
+			if (cidr.length == 2) {
+				builder.addAddress(cidr[0], cidr[1].toInteger());
+			}
+		}
 		routes.each {
 			String[] cidr = it.split("/");
 			
