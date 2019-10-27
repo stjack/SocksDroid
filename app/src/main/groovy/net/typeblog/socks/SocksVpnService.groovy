@@ -7,7 +7,7 @@ import android.os.IBinder
 import android.os.ParcelFileDescriptor
 import android.text.TextUtils
 import android.util.Log
-
+import android.os.Build
 import net.typeblog.socks.R
 import net.typeblog.socks.IVpnService
 import net.typeblog.socks.System
@@ -15,6 +15,10 @@ import net.typeblog.socks.util.Routes
 import net.typeblog.socks.util.Utility
 import static net.typeblog.socks.util.Constants.*
 import static net.typeblog.socks.BuildConfig.DEBUG
+import android.support.annotation.RequiresApi
+import 	android.app.NotificationManager
+import 	android.app.NotificationChannel
+import android.graphics.Color
 
 public class SocksVpnService extends VpnService {
 	private static final String TAG = 'SocksVpnService'
@@ -105,6 +109,25 @@ public class SocksVpnService extends VpnService {
 		}
 
 		// Create the notification
+		def channelId =""
+		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+			channelId =createNotificationChannel("my_service", name)
+		} else {
+			// If earlier version channel ID is not used
+			// https://developer.android.com/reference/android/support/v4/app/NotificationCompat.Builder.html#NotificationCompat.Builder(android.content.Context)
+			channelId =""
+		}
+
+		def notificationBuilder = NotificationCompat.Builder(this, channelId )
+		def notification = notificationBuilder.setOngoing(true)
+				.setSmallIcon(android.R.color.transparent)
+				.setPriority(PRIORITY_MIN)
+				.setCategory(Notification.CATEGORY_SERVICE)
+				.build()
+		startForeground(101, notification)
+/**
+ *      https://stackoverflow.com/questions/47531742/startforeground-fail-after-upgrade-to-android-8-1
+ *
 		startForeground(R.drawable.ic_launcher,
 			new Notification.Builder(this).with {
 				contentTitle = getString(R.string.notify_title)
@@ -113,7 +136,7 @@ public class SocksVpnService extends VpnService {
 				smallIcon = android.R.color.transparent
 				build()
 			})
-		
+**/
 		// Create an fd.
 		configure(name, route, perApp, appBypass, appList, ipv6)
 		
@@ -125,7 +148,18 @@ public class SocksVpnService extends VpnService {
 		
 		START_STICKY
 	}
-	
+
+	@RequiresApi(Build.VERSION_CODES.O)
+	private String createNotificationChannel(String channelId,String channelName){
+		def chan = new  NotificationChannel(channelId,
+				channelName, NotificationManager.IMPORTANCE_NONE)
+		chan.lightColor = Color.BLUE
+		chan.lockscreenVisibility = Notification.VISIBILITY_PRIVATE
+		def NotificationManager service = getSystemService(Context.NOTIFICATION_SERVICE)
+		service.createNotificationChannel(chan)
+		return channelId
+	}
+
 	@Override void onRevoke() {
 		super.onRevoke()
 		stopMe()
@@ -171,8 +205,10 @@ public class SocksVpnService extends VpnService {
 			mtu = 1500
 			session = name
 			addAddress "26.26.26.1", 24
+			Log.d(TAG, "addAddress -> 26.26.26.1")
 			addDnsServer "8.8.8.8"
-		
+			Log.d(TAG, "addDnsServer -> 8.8.8.8")
+
 			if (ipv6) {
 				// Route all IPv6 traffic
 				addAddress "fdfe:dcba:9876::1", 126

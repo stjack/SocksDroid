@@ -2,7 +2,7 @@
 
 2. ./build-jni.sh
 
-3. Then start to compile apk part...
+3. Then start to compile apk part using Android Studio's own build apk menu...
 
 
 https://www.iteye.com/blog/ch-kexin-2361194
